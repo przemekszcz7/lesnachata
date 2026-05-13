@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-forest-dark: #1a2f1a;
+  --color-forest-green: #2d4628;
+  --color-forest-light: #486438;
+  --color-earth-brown: #3d2b1f;
+  --color-wood-dark: #2a1a0a;
+  --color-wood-medium: #4a3728;
+  --color-wood-light: #8b5a3a;
+  --color-amber: #b48a47;
+  --color-moss: #8b9a46;
+  --color-cream: #fdfcf5;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-earth-brown font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.bg-forest-texture {
+  background-image: radial-gradient(circle at 2px 2px, rgba(45, 70, 40, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.wood-border {
+  border-image: linear-gradient(to bottom, #3d2b1f, #4a3728) 1;
+}
